@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kablammo&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Margens e Paddings gerais */
+* {
+    margin: 0; /* margem 0 para tudo*/
+    padding: 0; /* espaçamento 0 para tudo*/
+    box-sizing: border-box; /*largura e altura incluem padding e a borda*/
+}
+
+/*Corpo da página*/
+body {
+    font-family: 'Rock Salt', cursive; /*fonte do texto*/
+    background-size:cover; /*imagem ocupa toda a tela*/
+    background-image: url('/imagens/backgroundBody.jpg'); /*imagem de fundo*/
+    /*background-position: center; /*imagem no centro*/
+    background-repeat: no-repeat; /*não repete imagem*/
+    background-attachment: fixed; /*imagem fixa mesmo quando rola o scroll*/
+    text-align: center; /*centraliza o texto na tela*/
+    height: 100%; /*o body ocupa 100% do espaço da janela*/
+    overflow: auto;  /*se necessário, tem o scroll*/
+    color: black; /*cor do texto*/
+}
+
+/*Header*/
+header {
+    display: flex; /*dispõe o conteúdo de forma flexível, horizontal ou verticalmente*/
+    align-items: center; /*alinha verticalmente no centro*/
+    justify-content: space-between; /*distribui o espaço entre os itens*/
+    background-color: #ffda03; /*cor de fundo*/
+    padding: 10px 20px; /*espaçamento interno do cabeçalho*/
+    border-bottom: 2px solid rgb(51, 50, 50); /*uma borda p/ a parte inferior do header*/
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/*Imagem da cerveja à esquerda*/
+.header-img {
+    width: 50px; /*largura*/
+    height: 50px; /*altura*/
+    margin-right: 20px; /*Afastar a imagem um pouco da borda*/
+}
+
+/*Condeúdo do header*/
+.header-content {
+    display: flex; 
+    flex-direction: column; /*alinha o conteúdo verticalmente*/
+    justify-content: center; /*alinha verticalmente ao centro*/
+    align-items: center; /*alinha horizontalmente ao centro*/
+    flex-grow: 1; /*ocupa o espaço disponível*/
+}
+
+/* Título */
+.header-titulo {
+    font-size: 24px; /*tamanho da fonte*/
+    margin-bottom: 5px; /*espaço abaixo do título*/
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*Navegação*/
+.header-nav {
+    display: flex;
+    list-style: none; /*tira os pontos da lista*/
+    margin-top: 10px; /*espaço entre o título e os links*/
+}
+
+.header-nav li{
+    margin: 0 35px; /*espaço entre os itens da lista*/
+}
+
+.header-link {
+    color:white; /*cor do link*/
+    text-decoration: none; /*sem sublinhado*/
+    font-size: 16px; /*tamanho da fonte*/
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header-link:hover {
+    text-decoration: underline; /*sublinhado só quando passa o mouse em cima*/
+}
+
+.header-img2 {
+    width: 40px; 
+    height: 40px;
+    margin-left: 20px; /*Afastar um pouco a imagem da borda*/
+    cursor: pointer;
+}
+
+/*Rodapé*/
+footer{
+    text-align: center; /*alinha o texto no centro*/
+    padding: 10px;
+    background-color: #ffda03;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    position: fixed; /*fixa o rodapé na parte inferior da página*/
+    width: 100%; /*ocupa toda a largura da página*/
+    bottom: 0; /*põe o rodapé na parte inferior (position mantém)*/
+    border-top: 2px solid rgb(51, 50, 50); /*uma borda p/ a parte inferior do header*/
+    border-radius: 5px;
+    
+}
+
+/*Voltar para a página inicial*/
+.voltar-link{
+    position: fixed; /*Fixa na parte superior*/
+    top: 80px; /*Ajusta para ficar abaixo do header*/
+    left: 20px; /*Distância da borda esquerda*/
+    color: #ffd700; /*cor dourada*/
+    font-size: 16px;
+    font-weight: bold; /*negrito*/
+    text-decoration: none; /*tira sublinhado do link*/
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /*sombra*/
+    transition: color 0.3s, text-shadow 0.3s; /*transição para as mudanças do hover*/
+
+}
+
+.voltar-link:hover{ /*Alteração quando passa o mouse por cima do link*/
+    color: #e6b800;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /*aumenta a sombra*/
+}
+
+/*Responsividade - Ajustar a página às telas*/
+@media (max-width: 768px){
+    .header-content{
+        text-align: center; /*manter o alinhamento do texto no centro em telas diferentes*/
+    }
+
+    .header-nav{
+        flex-direction: column; /*organiza o conteúdo verticalmente em telas pequenas*/
+        margin-top: 10px; /*espaço entre links e título*/
+    }
+
+    .header-nav li{
+        margin: 5px 0; /*espaço entre os links*/
+    }
+
+    .header-img2{
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+    }
+
+}
+
+

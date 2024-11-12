@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Load</title>
+    <style>
+        /*não sei oq está acontecendo aqui, mas deixa*/
+        body {
+            display: flex;
+            justify-content: center;
+            /* pelo jeito isso daqui faz tudo ficar centralizado (quem diria)*/
+            align-items: center;
+            /* codigo que centraliza o load 2.0 (Não me perguntem a diferença que eu não sei) */
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        #load {
+            position: relative;
+            width: 100px;
+            height: 150px;
+        }
+
+        .caneco {
+            position: relative;
+            /* isso aqui vai ser relativo, que nem a beleza da pessoa que ta lendo isso*/
+            width: 100px;
+            /*isso serve pra deixar a largura das coisas como a gente quer.....bem que a thais carla precisa de uma dessas*/
+            height: auto;
+            /*se você nnão manja dos ingres, isso aqui vai ser a altura do bagulho*/
+            z-index: 1;
+        }
+
+        .liquido {
+            align-self: center;
+            z-index: 0;
+            margin-bottom: 30px;
+            position: absolute;
+            /*Absoluto que nem meu amor por vc XD*/
+            bottom: 0;
+            width: 80px;
+            height: 10px;
+            background-color: #f8d032;
+            /*Cor da cachaça no geral (mais um pouco de saturação e isso virava gasolina)*/
+            opacity: 0.8;
+            /*se o relacionamento dos meus amigos fosse transparente desse jeito, seria quase uma poligamia*/
+            animation: fill 1s ease-in-out forwards;
+            /* isso aqui vai ser a animação da parada, aqui é onde o filho chora e a mâe manda ele se lascar*/
+        }
+
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+            /*inmpede buliçoso de meter a mão mesmo que a cerveja fique invisivel*/
+        }
+
+        @keyframes fill {
+            0% {
+                /*Quanto tiver 0% a altura dele vai ser 0 tbm*/
+                height: 0%;
+            }
+
+            100% {
+                /*aqui ele percorre a altura até os 100% fazendo aquela subidinha marota */
+                height: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--comentar nesse programa é mais dificil que fazer o codigo em si, pqp-->
+    <div id="load"> <!-- aqui vai ser uma div (Nossa lobo mau)-->
+        <div class="liquido"></div>
+        <img src="imagens/cervejaFoda.png" alt="cerveja" class="caneco">
+    </div>
+
+    <script>
+        setTimeout(function () {
+            window.location.href = "/Site.html";
+        }, 800); //Tempo pra tela carregar, essa desgraça
+    </script>
+</body>
+
+</html>

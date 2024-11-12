@@ -1,0 +1,279 @@
+/* Margens e Paddings gerais */
+* {
+  margin: 0; /* margem 0 para tudo*/
+  padding: 0; /* espaçamento 0 para tudo*/
+  box-sizing: border-box; /*largura e altura incluem padding e a borda*/
+}
+
+/*Corpo da página*/
+body {
+  font-family: "Rock Salt", cursive; /*fonte do texto*/
+  background-size: cover; /*imagem ocupa toda a tela*/
+  background-image: url("/imagens/backgroundBody.jpg"); /*imagem de fundo*/
+  /*background-position: center; /*imagem no centro*/
+  background-repeat: no-repeat; /*não repete imagem*/
+  background-attachment: fixed; /*imagem fixa mesmo quando rola o scroll*/
+  text-align: center; /*centraliza o texto na tela*/
+  height: 100%; /*o body ocupa 100% do espaço da janela*/
+  overflow: auto; /*se necessário, tem o scroll*/
+  color: black; /*cor do texto*/
+}
+
+/*Header*/
+header {
+  display: flex; /*dispõe o conteúdo de forma flexível, horizontal ou verticalmente*/
+  align-items: center; /*alinha verticalmente no centro*/
+  justify-content: space-between; /*distribui o espaço entre os itens*/
+  background-color: #ffda03; /*cor de fundo*/
+  padding: 10px 20px; /*espaçamento interno do cabeçalho*/
+  border-bottom: 2px solid rgb(51, 50, 50); /*uma borda p/ a parte inferior do header*/
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/*Imagem da cerveja à esquerda*/
+.header-img {
+  width: 50px; /*largura*/
+  height: 50px; /*altura*/
+  margin-right: 20px; /*Afastar a imagem um pouco da borda*/
+}
+
+/*Condeúdo do header*/
+.header-content {
+  display: flex;
+  flex-direction: column; /*alinha o conteúdo verticalmente*/
+  justify-content: center; /*alinha verticalmente ao centro*/
+  align-items: center; /*alinha horizontalmente ao centro*/
+  flex-grow: 1; /*ocupa o espaço disponível*/
+}
+
+/* Título */
+.header-titulo {
+  font-size: 24px; /*tamanho da fonte*/
+  margin-bottom: 5px; /*espaço abaixo do título*/
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*Navegação*/
+.header-nav {
+  display: flex;
+  list-style: none; /*tira os pontos da lista*/
+  margin-top: 10px; /*espaço entre o título e os links*/
+}
+
+.header-nav li {
+  margin: 0 35px; /*espaço entre os itens da lista*/
+}
+
+.header-link {
+  color: white; /*cor do link*/
+  text-decoration: none; /*sem sublinhado*/
+  font-size: 16px; /*tamanho da fonte*/
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header-link:hover {
+  text-decoration: underline; /*sublinhado só quando passa o mouse em cima*/
+}
+
+.header-img2 {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px; /*Afastar um pouco a imagem da borda*/
+  cursor: pointer;
+}
+
+/*Rodapé*/
+footer {
+  text-align: center; /*alinha o texto no centro*/
+  padding: 10px;
+  background-color: #ffda03;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  position: fixed; /*fixa o rodapé na parte inferior da página*/
+  width: 100%; /*ocupa toda a largura da página*/
+  bottom: 0; /*põe o rodapé na parte inferior (position mantém)*/
+  border-top: 2px solid rgb(51, 50, 50); /*uma borda p/ a parte inferior do header*/
+  border-radius: 5px;
+}
+
+/*Voltar para a página inicial*/
+.voltar-link {
+  position: fixed; /*Fixa na parte superior*/
+  top: 80px; /*Ajusta para ficar abaixo do header*/
+  left: 20px; /*Distância da borda esquerda*/
+  color: #ffd700; /*cor dourada*/
+  font-size: 16px;
+  font-weight: bold; /*negrito*/
+  text-decoration: none; /*tira sublinhado do link*/
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /*sombra*/
+  transition: color 0.3s, text-shadow 0.3s; /*transição para as mudanças do hover*/
+}
+
+.voltar-link:hover {
+  /*Alteração quando passa o mouse por cima do link*/
+  color: #e6b800;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /*aumenta a sombra*/
+}
+
+.loading {
+  display: flex;
+  justify-content: center; /* pelo jeito isso daqui faz tudo ficar centralizado (quem diria)*/
+  align-items: center; /* codigo que centraliza o load 2.0 (Não me perguntem a diferença que eu não sei) */
+  min-height: 100vh;
+  margin: 0;
+}
+
+#load {
+  position: relative;
+  width: 100px;
+  height: 150px;
+}
+
+.caneco {
+  position: relative; /* isso aqui vai ser relativo, que nem a beleza da pessoa que ta lendo isso*/
+  width: 100px; /*isso serve pra deixar a largura das coisas como a gente quer.....bem que a thais carla precisa de uma dessas*/
+  height: auto; /*se você nnão manja dos ingres, isso aqui vai ser a altura do bagulho*/
+  z-index: 1;
+}
+
+.liquido {
+  align-self: center;
+  z-index: 0;
+  margin-bottom: 30px;
+  position: absolute; /*Absoluto que nem meu amor por vc XD*/
+  bottom: 0;
+  width: 80px;
+  height: 10px;
+  background-color: #f8d032; /*Cor da cachaça no geral (mais um pouco de saturação e isso virava gasolina)*/
+  opacity: 0.8; /*se o relacionamento dos meus amigos fosse transparente desse jeito, seria quase uma poligamia*/
+  animation: fill 3s ease-in-out forwards; /* isso aqui vai ser a animação da parada, aqui é onde o filho chora e a mâe manda ele se lascar*/
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none; /*inmpede buliçoso de meter a mão mesmo que a cerveja fique invisivel*/
+}
+
+@keyframes fill {
+  0% {
+    /*Quanto tiver 0% a altura dele vai ser 0 tbm*/
+    height: 0%;
+  }
+  100% {
+    /*aqui ele percorre a altura até os 100% fazendo aquela subidinha marota */
+    height: 70%;
+  }
+}
+
+.main-content {
+  display: none; /* O padrão */
+}
+
+/*Responsividade - Ajustar a página às telas*/
+@media (max-width: 768px) {
+  .header-content {
+    text-align: center; /*manter o alinhamento do texto no centro em telas diferentes*/
+  }
+
+  .header-nav {
+    flex-direction: column; /*organiza o conteúdo verticalmente em telas pequenas*/
+    margin-top: 10px; /*espaço entre links e título*/
+  }
+
+  .header-nav li {
+    margin: 5px 0; /*espaço entre os links*/
+  }
+
+  .header-img2 {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+}
+
+/*Cachaça*/
+.div-cachaca {
+  background: transparent;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: none;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.fieldset legend {
+  color: white;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card:nth-of-type(1) {
+  background-image: url(https://http2.mlstatic.com/D_NQ_NP_640276-MLA79645576035_092024-O.webp);
+}
+
+.card:nth-of-type(2) {
+  background-image: url(https://m.media-amazon.com/images/I/71recOZeu6L._AC_SX679_.jpg);
+}
+
+.card:nth-of-type(3) {
+  background-image: url(https://m.media-amazon.com/images/I/71EIxgN55ZL._AC_SX679_.jpg);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.descricao {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .descricao {
+  transform: translateY(0);
+  color: white;
+}
