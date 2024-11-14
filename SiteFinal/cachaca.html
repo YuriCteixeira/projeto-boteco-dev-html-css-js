@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cachaça </title>
+    <link rel="stylesheet" href="css/cachaca.css"> <!-- Trazendo o CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <!-- Fonte Google Fonts -->
+</head>
+
+<body>
+
+    <header id="main-content"> <!-- usei a tag headear apenas para os links das páginas -->
+        <img src="imagens/chopp.png" alt="Logo do Bar" class="header-img"> <!-- Logo do Bar -->
+
+        <div class="header-content">
+            <nav>
+                <ul class="header-nav">
+                    <li><a href="cachaca.html" class="header-link">Cachaça</a></li>
+                    <li><a href="cervejas.html" class="header-link">Cerveja</a></li>
+                    <li><a href="refrigerante.html" class="header-link">Refrigerante</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="carrinho-modal" id="carrinhoModal">
+            <div class="carrinho-modal-content">
+                <span class="fechar" id="fecharCarrinho">&times;</span>
+                <h2>Itens no Carrinho</h2>
+                <ul id="itensCarrinho"></ul>
+                <button id="finalizarCompra">Finalizar Compra</button>
+            </div>
+        </div>
+
+        
+        <div class="border-pai">
+            <a class="carrinho"><img id="mercado" src="/imagens/pngwing.com.png" alt=""></a>
+            <span id="contador" class="contador">0</span>
+        </div>
+    </header>
+
+    <h1 class="header-titulo">Bar Do Careca</h1>
+    <p class="header-titulo"> Opções de Cachaça: </p>
+    <!-- Foi Utilizado o align para fazer o texto ficar no centro da tela-->
+    <a href="index.html" class="voltar-link">Voltar para a página inicial</a> <!-- Link para a página inicial -->
+
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <p id="popup-text">Deseja adicionar este item ao carrinho?</p>
+            <button id="popup-confirm" class="popup-button">Sim</button>
+            <button id="popup-cancel" class="popup-button">Não</button>
+        </div>
+    </div>
+
+    <div class="div-cachaca">
+        <button class="card">
+            <h3>Ypioca Prata</h3>
+            <div class="descricao">Ypioca Prata: R25,00</div>
+        </button>
+
+        <button class="card">
+            <h3>Ypioca Ouro</h3>
+            <div class="descricao">Ypioca Ouro: R25,00</div>
+        </button>
+
+        <button class="card">
+            <h3>Ypioca 150 Anos</h3>
+            <div class="descricao">Ypioca 150 Anos: R25,00</div>
+        </button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bar do Careca. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

@@ -93,14 +93,13 @@ footer{
     padding: 10px;
     background-color: #ffda03;
     color: white;
-    font-weight: bold;
+    font-size: medium;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     position: fixed; /*fixa o rodapé na parte inferior da página*/
     width: 100%; /*ocupa toda a largura da página*/
     bottom: 0; /*põe o rodapé na parte inferior (position mantém)*/
     border-top: 2px solid rgb(51, 50, 50); /*uma borda p/ a parte inferior do header*/
     border-radius: 5px;
-    
 }
 
 /*Voltar para a página inicial*/
@@ -120,6 +119,80 @@ footer{
 .voltar-link:hover{ /*Alteração quando passa o mouse por cima do link*/
     color: #e6b800;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /*aumenta a sombra*/
+}
+
+#mercado {
+    width: 50px; /*largura*/
+    height: 50px; /*altura*/
+    background: none;
+    position: relative;
+}
+
+a #mercado{
+    background: none;
+}
+
+.contador {
+    font-family: sans-serif;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 14px;
+}
+
+.carrinho-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /*Garante que a altura ocupe toda a tela*/
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding-top: 50px;
+    overflow: hidden; /*Impede que modal exceda a tela*/
+}
+
+.carrinho-modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 300px;
+    max-height: 80vh;
+    border-radius: 8px;
+    text-align: center;
+    overflow: auto;
+}
+
+.fechar {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    background-color: #f1c40f;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 /*Responsividade - Ajustar a página às telas*/

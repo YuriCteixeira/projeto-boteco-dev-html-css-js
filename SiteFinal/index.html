@@ -7,7 +7,6 @@
     <title>Bar Do Careca</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Trazendo o CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-    <script src="JS/JS_Geral.js"></script>
     <!-- Fonte Google Fonts -->
 </head>
 
@@ -22,18 +21,33 @@
                 <ul class="header-nav"> <!--lista não ordenada-->
                     <li><a href="cachaca.html" class="header-link">Cachaça</a></li>
                     <li><a href="cervejas.html" class="header-link">Cerveja</a></li>
-                    <li><a href="Refrigerante.html" class="header-link">Refrigerante</a></li>
+                    <li><a href="refrigerante.html" class="header-link">Refrigerante</a></li>
                 </ul>
             </nav>
 
         </div>
 
+        <div class="carrinho-modal" id="carrinhoModal">
+            <div class="carrinho-modal-content">
+                <span class="fechar" id="fecharCarrinho">&times;</span>
+                <h2>Itens no Carrinho</h2>
+                <ul id="itensCarrinho"></ul>
+                <button id="finalizarCompra">Finalizar Compra</button>
+            </div>
+        </div>
+
+        <div class="border-pai">
+            <a class="carrinho"><img id="mercado" src="/imagens/pngwing.com.png" alt=""></a>
+            <span id="contador" class="contador">0</span>
+        </div>
     </header>
+
     <h1 class="header-titulo">Bar Do Careca</h1> <!--título da página-->
 
     <footer> <!--rodapé para copyright-->
         <p>&copy; 2024 Bar do Careca. Todos os direitos reservados.</p>
     </footer>
+    <script src="JS/script.js"></script>
 </body>
 
 </html>

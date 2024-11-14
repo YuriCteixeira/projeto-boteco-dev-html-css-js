@@ -119,58 +119,82 @@ footer {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /*aumenta a sombra*/
 }
 
-.loading {
-  display: flex;
-  justify-content: center; /* pelo jeito isso daqui faz tudo ficar centralizado (quem diria)*/
-  align-items: center; /* codigo que centraliza o load 2.0 (Não me perguntem a diferença que eu não sei) */
-  min-height: 100vh;
-  margin: 0;
+#mercado {
+  width: 50px; /*largura*/
+  height: 50px; /*altura*/
 }
 
-#load {
-  position: relative;
-  width: 100px;
-  height: 150px;
+a #mercado{
+  background: none;
 }
 
-.caneco {
-  position: relative; /* isso aqui vai ser relativo, que nem a beleza da pessoa que ta lendo isso*/
-  width: 100px; /*isso serve pra deixar a largura das coisas como a gente quer.....bem que a thais carla precisa de uma dessas*/
-  height: auto; /*se você nnão manja dos ingres, isso aqui vai ser a altura do bagulho*/
-  z-index: 1;
+.contador {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 14px;
 }
 
-.liquido {
-  align-self: center;
-  z-index: 0;
-  margin-bottom: 30px;
-  position: absolute; /*Absoluto que nem meu amor por vc XD*/
-  bottom: 0;
-  width: 80px;
-  height: 10px;
-  background-color: #f8d032; /*Cor da cachaça no geral (mais um pouco de saturação e isso virava gasolina)*/
-  opacity: 0.8; /*se o relacionamento dos meus amigos fosse transparente desse jeito, seria quase uma poligamia*/
-  animation: fill 3s ease-in-out forwards; /* isso aqui vai ser a animação da parada, aqui é onde o filho chora e a mâe manda ele se lascar*/
+/* Estilo da sobreposição de fundo do pop-up */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  display: none; /* Escondido por padrão */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-.hidden {
-  opacity: 0;
-  pointer-events: none; /*inmpede buliçoso de meter a mão mesmo que a cerveja fique invisivel*/
+/* Estilo do conteúdo do pop-up */
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  width: 300px;
+  max-width: 80%;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes fill {
-  0% {
-    /*Quanto tiver 0% a altura dele vai ser 0 tbm*/
-    height: 0%;
-  }
-  100% {
-    /*aqui ele percorre a altura até os 100% fazendo aquela subidinha marota */
-    height: 70%;
-  }
+/* Texto do pop-up */
+.popup-content p {
+  margin: 0 0 20px;
+  font-size: 18px;
+  color: #333;
 }
 
-.main-content {
-  display: none; /* O padrão */
+/* Estilo dos botões do pop-up */
+.popup-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.popup-button:hover {
+  background-color: #0056b3;
+}
+
+/* Botão de cancelar com cor diferente */
+#popup-cancel {
+  background-color: #dc3545;
+}
+
+#popup-cancel:hover {
+  background-color: #c82333;
 }
 
 /*Responsividade - Ajustar a página às telas*/
@@ -196,7 +220,7 @@ footer {
 }
 
 /*Cachaça*/
-.div-cachaca {
+.div-cerva {
   background: transparent;
   display: flex;
   text-align: center;
@@ -243,15 +267,15 @@ footer {
 }
 
 .card:nth-of-type(1) {
-  background-image: url(https://http2.mlstatic.com/D_NQ_NP_640276-MLA79645576035_092024-O.webp);
+  background-image: url(https://revistalivemarketing.com.br/wp-content/uploads/2022/07/Brahma-homenageia-Fred-com-lata-comemorativa-800x600.jpg);
 }
 
 .card:nth-of-type(2) {
-  background-image: url(https://m.media-amazon.com/images/I/71recOZeu6L._AC_SX679_.jpg);
+  background-image: url(https://i.pinimg.com/736x/a8/c1/0f/a8c10f59dcddd3866c29fe793766120e.jpg);
 }
 
 .card:nth-of-type(3) {
-  background-image: url(https://m.media-amazon.com/images/I/71EIxgN55ZL._AC_SX679_.jpg);
+  background-image: url(https://www.opovo.com.br/_midias/jpg/2020/11/10/legitima_350_ml-14019152.jpg);
 }
 
 .card img {
@@ -260,6 +284,7 @@ footer {
 }
 
 .descricao {
+  font-family: "Rock Salt", cursive;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -276,4 +301,65 @@ footer {
 .card:hover .descricao {
   transform: translateY(0);
   color: white;
+}
+
+
+.contador {
+  font-family: sans-serif;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 14px;
+}
+
+.carrinho-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  padding-top: 50px;
+}
+
+.carrinho-modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.fechar {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px;
+  background-color: #f1c40f;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
 }

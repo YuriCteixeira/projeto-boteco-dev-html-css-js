@@ -7,7 +7,6 @@
     <title> Refrigerante </title>
     <link rel="stylesheet" href="css/refri.css"> <!-- Trazendo o CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-    <script src="/JS/JS_Geral.js"></script>
     <!-- Fonte Google Fonts -->
 </head>
 
@@ -21,46 +20,66 @@
                 <ul class="header-nav">
                     <li><a href="cachaca.html" class="header-link">Cachaça</a></li>
                     <li><a href="cervejas.html" class="header-link">Cerveja</a></li>
-                    <li><a href="Refrigerante.html" class="header-link">Refrigerante</a></li>
+                    <li><a href="refrigerante.html" class="header-link">Refrigerante</a></li>
                 </ul>
             </nav>
         </div>
         <!-- Imagem para controle do áudio (canto direito) -->
+        <div class="carrinho-modal" id="carrinhoModal">
+            <div class="carrinho-modal-content">
+                <span class="fechar" id="fecharCarrinho">&times;</span>
+                <h2>Itens no Carrinho</h2>
+                <ul id="itensCarrinho"></ul>
+                <button id="finalizarCompra">Finalizar Compra</button>
+            </div>
+        </div>
+
+        <div class="border-pai">
+            <a class="carrinho"><img id="mercado" src="/imagens/pngwing.com.png" alt=""></a>
+            <span id="contador" class="contador">0</span>
+        </div>
 
     </header>
 
     <h1 class="header-titulo">Bar Do Careca</h1>
     <p class="header-titulo"> Opções de Refrigerante: </p>
     <!-- Foi Utilizado o align para fazer o texto ficar no centro da tela-->
-    <a href="Site.html" class="voltar-link">Voltar para a página inicial</a> <!-- Link para a página inicial -->
+    <a href="index.html" class="voltar-link">Voltar para a página inicial</a> <!-- Link para a página inicial -->
+
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <p id="popup-text">Deseja adicionar este item ao carrinho?</p>
+            <button id="popup-confirm" class="popup-button">Sim</button>
+            <button id="popup-cancel" class="popup-button">Não</button>
+        </div>
+    </div>
+    
 
     <div class="div-refrigerante">
 
-
-        <div class="card">
-
+        <button class="card">
             <h3>Coca Cola 2L</h3>
             <div class="descricao">Coca Cola 2L: R10,00</div>
-        </div>
-        <div class="card">
+        </button>
 
+        <button class="card">
             <h3>Guaraná Antártica 2L</h3>
-            <div class="descricao">Sprite 2L: R6,69</div>
-        </div>
-        <div class="card">
-
-            <h3>Sprite 2L: R6,69</h3>
+            <div class="descricao">Sprite 2L:  R6,69</div>
             <div class="descricao">Guaraná Antártica: R8,99</div>
-        </div>
+        </button>
+
+        <button class="card">
+            <h3>Sprite 2L:</h3>
+            <div class="descricao">Sprite 2L:  R6,69</div>
+        </button>
 
     </div>
 
-
     <footer>
-
         <p>&copy; 2024 Bar do Careca. Todos os direitos reservados.</p>
-
     </footer>
+
+    <script src="/JS/script.js"></script>
 </body>
 
 </html>
